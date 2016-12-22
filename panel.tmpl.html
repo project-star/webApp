@@ -1,0 +1,74 @@
+<div role="dialog"  layout="column" layout-align="center center">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Log in</h2>
+    </div>
+  </md-toolbar>
+    <div>
+    <md-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="Existing User">
+                <md-content class="logInDialogPadding">
+                    <div layout="column" style="width:310px">
+                        <md-input-container class="md-block" flex="20">
+                        <label>Username</label>
+                        <input ng-model="existing.username" required >
+                        </md-input-container>
+                        <md-input-container class="md-block" flex >
+                        <label>Password</label>
+                        <input ng-model="existing.password" type="password" required>
+                      </md-input-container>
+                        <div layout="row">
+                            <md-switch ng-model="data.cb1" >
+                                 Show Password
+                              </md-switch>    
+                        </div>
+                        <div layout="row" layout-align="space-around none">
+                             <md-button class="md-raised md-primary">Forgot Password</md-button>
+                             <md-button class="md-raised md-primary" ng-click="existing.submit()" >Submit</md-button>
+                        </div>
+                    </div>
+                </md-content>
+            </md-tab>
+            
+            
+            
+            
+            
+            
+            <md-tab label="New User">
+                <md-content class="logInDialogPadding">
+                    <div layout="column" style="width:310px">
+                        <md-input-container class="md-block" flex="20">
+                        <label>Username</label>
+                        <input ng-model="new.userName" required>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex >
+                        <label>Password</label>
+                        <input ng-model="new.password" type="password" required>
+                      </md-input-container>
+                      <md-input-container class="md-block">
+                    <label>Client Email</label>
+                    <input required type="email" name="clientEmail" ng-model="new.email"
+                           minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                  </md-input-container>
+
+                        <md-switch ng-model="data.cb1" >
+                                 Show Password
+                         </md-switch>    
+                        
+                        <div layout="row" layout-align="space-around none">
+                            <span flex></span>
+                             <md-button class="md-raised md-primary" flex="30">Submit</md-button>
+                        </div>
+                    </div>
+                </md-content>
+            </md-tab>
+            
+        
+        </md-tabs>
+    
+    </md-content>
+    </div>
+    
+</div>
